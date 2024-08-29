@@ -1,30 +1,39 @@
 to do:
 mandatory
   part1                       part2
-    ~~✔ isalpha~~               • ft_substr
-    ~~✔ isdigit~~               • ft_strjoin
-    ~~✔ isalnum~~               • ft_strtrim
-    ~~✔ isascii~~               • ft_split
-    ~~✔ isprint~~               • ft_itoa
-    ~~✔ strlen~~                • ft_strmapi
-    • memset                    • ft_striteri
-    • bzero                     • ft_putchar_fd
-    • memcpy                    • ft_putstr_fd
-    • memmove                   • ft_putendl_fd
-    • strlcpy                   • ft_putnbr_fd
+   ✅ isalpha                  • ft_substr
+   ✅ isdigit                  • ft_strjoin
+   ✅ isalnum                  • ft_strtrim
+   ✅ isascii                  • ft_split
+   ✅ isprint                  • ft_itoa
+   ✅ strlen                   • ft_strmapi
+    • memset                   • ft_striteri
+    • bzero                    • ft_putchar_fd
+    • memcpy                   • ft_putstr_fd
+    • memmove                  • ft_putendl_fd
+   ✅ strlcpy                  • ft_putnbr_fd
     • strlcat
-    • toupper
-    • tolower
-    ~~✔ strchr~~
-    ~~✔ strrchr~~
+   ✅ toupper
+   ✅ tolower
+   ✅ strchr
+   ✅ strrchr
     • strncmp
     • memchr
     • memcmp
     • strnstr
-    ~~✔ atoi~~
+   ✅ atoi
     uses malloc:
       • calloc
       • strdup
 
 bonus:
     • ft_lstnew
+    • ft_lstadd_front
+    • ft_lstsize
+    • ft_lstlast
+    • ft_lstadd_back
+    • ft_lstdelone
+    • ft_lstclear
+    • ft_lstiter
+    • ft_lstmap
+
