@@ -2,30 +2,34 @@
 
 size_t  ft_strlcat(char *dst, const char *src, size_t size)
 {
-  int i;
   size_t k;
-  size_t size_return;
-  size_return += ft_strlen(src);
+  size_t return_size;
+  return_size = ft_strlen(dst) + ft_strlen(src);
+  int i;
+  i = ft_strlen(dst);
   k = 0;
-  i = 0;
-  if (size <= 0)
-    return(size + size_return);
-  while (dst[i])
-    i++;
+  if (size == 0)
+    return((size_t)(ft_strlen(src)));
   while (src[k] && k < size - i - 1)
   {
     dst[i + k] = src[k];
     k++;
   }
   dst[i + k] = '\0';
-  return (size_return + size);
+  return (return_size);
 }
-
+/* -lbsd
 int main()
 {
-  char arr[50] = {"O Maior do mundo"};
+  char arr[50] = {"The biggest of the world "};
   char src[] = {"Vasco da gama"};
-
-  printf ("%ld", strlcat(arr, src, 50));
-  printf ("%ld", ft_strlcat (arr, src, 50));
-}
+  //printf ("%ld\n", strlcat(arr, src, 50));
+  //printf ("%ld\n", ft_strlcat (arr, src, 50));
+  int i = 0;
+  while (arr[i])
+  {
+    write(1,&arr[i],1);
+    i++;
+  }
+  write(1,"\n",1);
+}*/

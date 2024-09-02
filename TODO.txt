@@ -1,27 +1,31 @@
-to do:
+to do: (lembrar de tirar as bibliotecas do .h)
+✅ = done.
+* = needs revision before sending.
+• = not started.
+🛠️ = working on it. 
 mandatory
   part1                       part2
-   ✅ isalpha                  • ft_substr
-   ✅ isdigit                  • ft_strjoin
-   ✅ isalnum                  • ft_strtrim
-   ✅ isascii                  • ft_split
-   ✅ isprint                  • ft_itoa
-   ✅ strlen                   • ft_strmapi
+  *✅ isalpha                  • ft_substr
+  *✅ isdigit                  • ft_strjoin
+  *✅ isalnum                  • ft_strtrim
+  *✅ isascii                  • ft_split
+  *✅ isprint                  • ft_itoa
+  *✅ strlen                   • ft_strmapi
     • memset                   • ft_striteri
     • bzero                    • ft_putchar_fd
     • memcpy                   • ft_putstr_fd
     • memmove                  • ft_putendl_fd
-   ✅ strlcpy                  • ft_putnbr_fd
-    • strlcat
-   ✅ toupper
-   ✅ tolower
-   ✅ strchr
-   ✅ strrchr
-    • strncmp
+  *✅ strlcpy                  • ft_putnbr_fd
+  *✅ strlcat
+  *✅ toupper
+  *✅ tolower
+  *✅ strchr
+  *✅ strrchr
+   🛠️ strncmp
     • memchr
     • memcmp
-    • strnstr
-   ✅ atoi
+  *✅ strnstr
+  *✅ atoi
     uses malloc:
       • calloc
       • strdup
