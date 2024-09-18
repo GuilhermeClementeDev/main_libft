@@ -18,13 +18,13 @@ size_t  ft_strlcat(char *dst, const char *src, size_t size)
   dst[i + k] = '\0';
   return (return_size);
 }
-/* -lbsd
+
 int main()
 {
-  char arr[50] = {"The biggest of the world "};
+  char arr[50] = {"The biggest of the world: "};
   char src[] = {"Vasco da gama"};
   //printf ("%ld\n", strlcat(arr, src, 50));
-  //printf ("%ld\n", ft_strlcat (arr, src, 50));
+  printf ("%ld\n", ft_strlcat (arr, src, 50));
   int i = 0;
   while (arr[i])
   {
@@ -32,4 +32,4 @@ int main()
     i++;
   }
   write(1,"\n",1);
-}*/
+}
