@@ -402,5 +402,20 @@ int main()
 	ft_putnbr_fd(10, 1);
 	ft_putnbr_fd(-10, 1);*/
 
+
+	//ft_lstsize (função para contar nodes)
+	/*t_list *ptr;
+	t_list a;
+	a.content = "Teste1";
+	t_list b;
+	b.content = "Teste2";
+	t_list c;
+	c.content = "Teste3";
+	ptr = &a;
+	a.next = &b;
+	b.next = &c;
+	c.next = NULL;
+	printf("%d", ft_lstsize(ptr));*/
+
 	return (0);
 }
