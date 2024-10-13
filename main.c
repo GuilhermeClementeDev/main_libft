@@ -3,6 +3,10 @@
 #include <bsd/string.h>
 #include <stdint.h>
 #include <ctype.h>
+
+void	print_content(t_list *node);
+void	del_content(void *content);
+
 int main()
 {
 	/*// ft_isalpha.c (verifica se é alpha)
@@ -403,19 +407,140 @@ int main()
 	ft_putnbr_fd(-10, 1);*/
 
 
-	//ft_lstsize (função para contar nodes)
-	/*t_list *ptr;
-	t_list a;
-	a.content = "Teste1";
-	t_list b;
-	b.content = "Teste2";
-	t_list c;
-	c.content = "Teste3";
-	ptr = &a;
-	a.next = &b;
-	b.next = &c;
-	c.next = NULL;
-	printf("%d", ft_lstsize(ptr));*/
+	/*// ft_lstnew (cria um novo node)
+	int *value = (int *)malloc(sizeof(int));
+	*value = 42;
+	t_list *node = ft_lstnew(value);
+	print_content(node);
+	if (node->next == NULL)
+		printf("(NULL)\n");*/
+
+
+	/*//ft_lstadd_front (adiciona um novo node no começo)
+
+	int *value1 = (int *)malloc(sizeof(int));
+	*value1 = 42;
+	int *value2 = (int *)malloc(sizeof(int));
+	*value2 = 84;
+	t_list *node1 = ft_lstnew(value1);
+	t_list *node2 = ft_lstnew(value2);
+	t_list *list = node1;
+	ft_lstadd_front(&list, node2);
+	print_content(list);
+	print_content(list->next);*/
+
+	/*//ft_lstsize (função para contar nodes)
+	t_list *ptr01;
+	int *value1 = (int *)malloc(sizeof(int));
+	*value1 = 42;
+	ptr01 = ft_lstnew (value1);
+	t_list *ptr02;
+	int *value2 = (int *)malloc(sizeof(int));
+	*value1 = 442;
+	ptr02 = ft_lstnew (value2);
+	t_list *start;
+	start = NULL;
+	ft_lstadd_front (&start, ptr01);
+	ft_lstadd_front (&start, ptr02);
+	printf("%d", ft_lstsize(start));*/
+
+	/*// ft_lstlast (vai par o ultimo node)
+	t_list *ptr01;
+	int *value1 = (int *)malloc(sizeof(int));
+	*value1 = 42;
+	ptr01 = ft_lstnew (value1);
+	t_list *ptr02;
+	int *value2 = (int *)malloc(sizeof(int));
+	*value2 = 442;
+	ptr02 = ft_lstnew (value2);
+	t_list *ptr03;
+	int *value3 = (int *)malloc(sizeof(int));
+	*value3 = 224;
+	ptr03 = ft_lstnew (value3);
+	t_list *start;
+	start = NULL;
+	ft_lstadd_front (&start, ptr03);
+	ft_lstadd_front (&start, ptr02);
+	ft_lstadd_front (&start, ptr01);
+
+	t_list	*last;
+	last = ft_lstlast(start);
+	print_content (last);*/
+
+	// ft_lstadd_back
+	/*int *value1 = (int *)malloc(sizeof(int));
+	*value1 = 42;
+	int *value2 = (int *)malloc(sizeof(int));
+	*value2 = 84;
+	int *value3 = (int *)malloc(sizeof(int));
+	*value3 = 168;
+	int *value4 = (int *)malloc(sizeof(int));
+	*value4 = 336;
+	t_list *node1 = ft_lstnew(value1);
+	t_list *node2 = ft_lstnew(value2);
+	t_list *node3 = ft_lstnew(value3);
+	t_list *node4 = ft_lstnew(value4);
+	t_list *list = node1;
+	ft_lstadd_back(&list, node2);
+	ft_lstadd_back(&list, node3);
+	ft_lstadd_back (&list, node4);
+	t_list *last = ft_lstlast (list);
+	print_content(list);
+	if (list->next == NULL)
+		printf("(NULL)\n");
+	print_content(last);
+	if (last->next == NULL)
+		printf("(NULL)\n");*/
+
+	// ft_deolne (delete um node)
+	/*char *str = strdup("Teste de conteúdo");
+	t_list *node = ft_lstnew((void *)str);
+	if (node == NULL)
+	{
+		printf("Erro ao criar nó\n");
+		return (1);
+	}
+	printf("Conteúdo antes de deletar: %s\n", (char *)node->content);
+	ft_lstdelone(node, del_content);
+	printf("Nó deletado com sucesso\n");*/
+
+	/*// ft_lstclear
+	char *str1 = strdup("Nó 1");
+	char *str2 = strdup("Nó 2");
+	char *str3 = strdup("Nó 3");
+	t_list *node1 = ft_lstnew((void *)str1);
+	t_list *node2 = ft_lstnew((void *)str2);
+	t_list *node3 = ft_lstnew((void *)str3);
+	node1->next = node2;
+	node2->next = node3;
+	printf("Conteúdo antes de limpar a lista:\n");
+	t_list *temp = node1;
+	while (temp)
+	{
+		printf("%s\n", (char *)temp->content);
+		temp = temp->next;
+	}
+	ft_lstclear(&node1, del_content);
+	if (node1 == NULL)
+		printf("Lista limpada com sucesso\n");
+	else
+		printf("Falha ao limpar a lista\n");*/
 
 	return (0);
+}
+
+void	print_content(t_list *node)
+{
+	if (node && node->content)
+	{
+		int *int_content = (int *)(node->content);
+		printf("Valor do content: %d\n", *int_content);
+	}
+	else
+		printf("Nó ou content é NULL\n");
+}
+
+void	del_content(void *content)
+{
+	free(content);
 }
